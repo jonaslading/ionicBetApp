@@ -1,0 +1,15 @@
+<ion-view hide-back-button="true" title="Bets">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios7-plus-empty"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="bet in bets" href="#/app/bets/{{playlist.id}}">
+        {{bet.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
