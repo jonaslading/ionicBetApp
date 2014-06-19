@@ -6,19 +6,19 @@
             <div class="list">
                 <label class="item item-input">
                     <span class="input-label">Username</span>
-                    <input type="text" ng-model="user.username">
+                    <input type="text" ng-model="user.mail">
                 </label>
                 <label class="item item-input">
                     <span class="input-label">Password</span>
                     <input type="password" ng-model="user.password">
                 </label>
             </div>
-            <div class="padding">
-                <button class="button button-block button-positive" ng-click="signIn(user)">
+            <div>
+                <button class="button button-full button-positive" ng-click="submitToken()">
                     Sign-In
                 </button>
                 <p class="text-center">
-                    <a href="#/forgot-password">Forgot password</a>
+                    <a href="#/sign-up">Not a user yet?</a>
                 </p>
             </div>
         </ion-content>

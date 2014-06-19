@@ -30,6 +30,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
     })
+    .state('sign-up', {
+      url: "/sign-up",
+      templateUrl: "templates/sign-up.html",
+      controller: 'LoginCtrl'
+
+    })
 
     .state('app', {
       url: "/app",
@@ -66,7 +72,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
 
     .state('app.single', {
-      url: "/Bets/:playlistId",
+      url: "/bets/:playlistId",
       views: {
         'menuContent' :{
           templateUrl: "templates/playlist.html",

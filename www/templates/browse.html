@@ -1,8 +1,27 @@
-<ion-view title="Browse">
+<ion-view hide-back-button="true" title="New Bet">
   <ion-nav-buttons side="left">
-    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button button-icon icon ion-ios7-close-empty" href="#/app/bets"></a>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <h1>Browse</h1>
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Bet participant</span>
+
+        <input type="text" >
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Bet terms</span>
+
+        <textarea rows="5"></textarea>
+      </label>
+    </div>
+    <div class="padding">
+      <button class="button button-full button-positive" ng-click="registerUser()||signIn()">
+        Submit
+      </button>
+    </div>
   </ion-content>
 </ion-view>
