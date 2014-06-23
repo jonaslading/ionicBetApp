@@ -3,20 +3,21 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <a class="button button-icon icon ion-ios7-plus-empty" href="#/app/browse"></a>
+    <a class="button button-icon icon ion-ios7-plus-empty" href="#/app/new-bet"></a>
   </ion-nav-buttons>
   <ion-content class="has-header">
     <ion-list>
-      <ion-item ng-repeat="bet in bets" href="#/app/bets/{{bets.id}}">
+      <ion-item ng-repeat="bet in bets" href="#/app/bets/{{bet.id}}">
 
-          <h2>
-            <i class="icon ion-chatbubble-working"></i>
-            {{bet.title}}
+        <h2>
+          <i class="icon ion-alert-circled" ng-hide="bet.isApproved"></i>
+
+          {{bet.date}}
             <span class="item-note">
-              {{bet.date}}
+              {{bet.participant}}
             </span>
-          </h2>
-          <p>{{bet.content}}</p>
+        </h2>
+        <p>{{bet.content}}</p>
       </ion-item>
     </ion-list>
   </ion-content>

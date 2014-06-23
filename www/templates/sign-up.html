@@ -5,16 +5,16 @@
     <ion-content class="has-header">
         <div class="list">
             <label class="item item-input">
-                <span class="input-label">Username</span>
-                <input type="text" ng-model="user.mail">
+                <span class="input-label">Email</span>
+                <input type="email" ng-model="user.mail" required>
             </label>
             <label class="item item-input">
                 <span class="input-label">Password</span>
-                <input type="password" ng-model="user.password">
+                <input type="password" ng-model="user.password" ng-minlength="4" required>
             </label>
         </div>
         <div class="padding">
-            <button class="button button-full button-positive" ng-click="registerUser()||signIn()">
+            <button class="button button-full button-positive" ng-click="registerUser(user)">
                 Add User
             </button>
             <p class="text-center">

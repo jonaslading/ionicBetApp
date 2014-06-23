@@ -1,6 +1,6 @@
+angular.module('betApp.directives', [])
 
-
-betApp.directive('ngApp', function() {
+.directive('ngApp', function() {
   return {
 
     controller: 'AppCtrl',
@@ -8,23 +8,16 @@ betApp.directive('ngApp', function() {
       scope.init();
     }
   }
-});
+})
 
-betApp.directive('betList', function() {
+.directive('contact', function() {
   return {
-    restrict: 'EA',
-    replace: false,
-    scope:{
-      action: '&', // is not being used right now...
-      bet: '=',
-      bets: '='
-    },
-    /* 	    template: '<tr class="betList" ng-click="handleClick()"><td> {{bet.bet}}</td><td>{{bet.name}}</td></tr>', */
-    templateUrl: 'src/templates/betList.html',
-    controller: 'BetListCtrl',
-    link:function(scope,element,attrs){
 
-      /* watch function on bets object (containing all bets)*/
+    controller: {
+
+    },
+    link:function(scope,element,attrs){
+      scope.init();
     }
   }
 });
