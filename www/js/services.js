@@ -106,7 +106,7 @@ angular.module('betApp.services', [])
     }
   };
 })
-  .factory('contacts', ['$q', function ($q) {
+  .service('contacts', ['$q', function ($q) {
 
     return {
 
@@ -131,22 +131,7 @@ angular.module('betApp.services', [])
         return q.promise;
       }
 
-      /*
-       getContact: function (contact) {
-       var q = $q.defer();
 
-       navigator.contacts.pickContact(function (contact) {
-
-       })
-
-       }
-       */
-
-      // TODO: method to set / get ContactAddress
-      // TODO: method to set / get ContactError
-      // TODO: method to set / get ContactField
-      // TODO: method to set / get ContactName
-      // TODO: method to set / get ContactOrganization
 
     }
 

@@ -45,7 +45,9 @@ angular.module('betApp', ['ionic', 'betApp.directives', 'betApp.controllers','be
         url: "/search",
         views: {
           'menuContent': {
-            templateUrl: "templates/search.html"
+            templateUrl: "templates/search.html",
+            controller: 'SearchCtrl'
+
           }
         }
       })

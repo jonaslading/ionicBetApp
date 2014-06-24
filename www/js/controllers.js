@@ -442,19 +442,33 @@ angular.module('betApp.controllers', [])
 .controller('BetsCtrl', function($scope) {
 
 })
-.controller('NewBetCtrl', function($scope) {
-    $scope.contactList = [
-      {firstName:"jonas", lastName:"jonassen", nickname:"the baws", phoneNumber:"66666666", email:"jonas@awesome.dk"},
-      {firstName:"jonas", lastName:"jonassen", nickname:"the baws", phoneNumber:"99999999", email:"cool@awesome.dk"},
-      {firstName:"jonas", lastName:"jonassen", nickname:"the baws", phoneNumber:"11111111", email:"jonas@awesome.dk"},
-      {firstName:"bob", lastName:"jonassen", nickname:"the baws", phoneNumber:"66666666", email:"jonas@jaaa.dk"},
-      {firstName:"sturm", lastName:"jonassen", nickname:"the baws", phoneNumber:"66666666", email:"jonas@awesome.dk"}
+.controller('NewBetCtrl', function($scope) {}
+  )
+.controller('SearchCtrl', function($scope) {
 
-    ];
+
+
+
+
+    ionic.Platform.ready(function(){
+
+      navigator.contacts.find(["name", "phoneNumbers", "emails"], function (results) {
+
+          console.log(results);
+          $scope.contactList = results;
+          $scope.$apply();
+
+        },
+        function (err) {
+          alert(err);
+        }, {"filter":"", "multiple": true});
+    });
+    // contact service needs some lovin' bugs out right now
 /*    contacts.getAll().then(function(results){
-      $scope.contacts = results;
+      $scope.contactsList = results;
       console.log("DEBUGGIN: contact object: "+JSON.stringify(results));
     },function(err){
+      console.log("ERROR: contact object stuff: "+JSON.stringify(err));
 
     });*/
 
