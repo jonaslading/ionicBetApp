@@ -2,7 +2,7 @@ angular.module('betApp.services', [])
 
 .service('betService', ['$http', '$q', function($http, $q){
 
-  var serverURL = 'http://localhost:3000'/* 'http://betappserver.herokuapp.com' */; //on localhost while developing!!!!
+  var serverURL = /*'http://localhost:3000'*/ 'http://betappserver.herokuapp.com'; //on localhost while developing!!!!
 
   var	getAllBets = function(){
 
